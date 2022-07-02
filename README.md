@@ -61,3 +61,8 @@ ganache-cli \
 env $(cat .env) npx truffle test --network mainnet_fork test/test-erc20.js
 env $(cat .env) npx truffle test --network mainnet_fork test/test-dydx-solo-margin.js
 ```
+
+1. 使用的是mainnet.infura.io，不是alchemyapi.io，infuro的主网在https://infura.io/，需要自己去注册project获取WEB3_INFURA_PROJECT_ID
+2. 我不用vyper，truffile compile前把contracts下面的vy文件迁移走
+3. BLOCK=11597142是用原来readme里的
+4. truffle compile的时候solc版本可能不对，需要改一下truffle.config.js里的version为^0.8.0
